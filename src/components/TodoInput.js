@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import TodoList from './TodoList'
-import { toast } from 'react-toastify';
 
 
 export class TodoInput extends Component {
@@ -46,7 +45,6 @@ export class TodoInput extends Component {
                     this.setState({ msg: true })
                     if (res.data.register === true) {
                         console.log("I am right")
-                        toast.success("Register Success", { autoClose: 2000, position: toast.POSITION.BOTTOM_CENTER });
                         this.componentDidMount()
                     }
                 })
